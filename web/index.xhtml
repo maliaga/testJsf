@@ -23,7 +23,14 @@
         </h:inputText>
         <h:message for="sueldoDeseado"/>
         <br/>
+        <h:outputLabel for="fechaNacimiento" value="Fecha Nacimiento: "/>
+        <h:inputText id="fechaNacimiento" value="#{vacanteForm.candidato.fechaNacimiento}" required="true">
+            <f:convertDateTime pattern="dd/mm/yyyy"/>
+        </h:inputText>
+        <h:message for="fechaNacimiento"/>
+        <br/>
         <h:commandButton action="#{vacanteForm.enviar}" value="Enviar"/>
+        <h:messages globalOnly="true"/>
     </h:form>
 </h:body>
 </html>
