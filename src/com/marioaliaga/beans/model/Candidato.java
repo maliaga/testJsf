@@ -2,6 +2,7 @@ package com.marioaliaga.beans.model;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import java.util.Date;
 
 /**
  * Created by maliaga on 8/17/16.
@@ -16,6 +17,15 @@ public class Candidato {
     private String nombre;
     private String apellido;
     private Integer sueldoDeseado;
+    private Date fechaNacimiento;
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
     public Integer getSueldoDeseado() {
         return sueldoDeseado;

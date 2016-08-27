@@ -32,7 +32,7 @@ public class VacanteForm {
     public String enviar() {
         if (this.candidato.getNombre().equals("Mario")) {
             if (this.candidato.getApellido().equals("Aliaga")) {
-                String msg = "Mensaje global";
+                String msg = "Ud ya trabaja con nosotros.";
                 FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, msg, msg);
                 FacesContext facesContext = FacesContext.getCurrentInstance();
                 facesContext.addMessage(null, facesMessage);
