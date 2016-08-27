@@ -8,7 +8,7 @@
 </h:head>
 <h:body>
 
-    <h:form>
+    <h:form id="vacanteForm">
         <h:outputLabel for="nombre" value="#{msg.nombre}"/>
         <h:inputText id="nombre" value="#{vacanteForm.candidato.nombre}" required="true"/>
         <h:message for="nombre"/>
@@ -28,6 +28,20 @@
             <f:convertDateTime pattern="dd/mm/yyyy"/>
         </h:inputText>
         <h:message for="fechaNacimiento"/>
+        <br/>
+        <h:outputLabel for="ciudad" value="#{msg['vacanteForm.ciudad']}"/>
+        <h:inputText id="ciudad" value="#{vacanteForm.candidato.ciudad}" required="true"/>
+        <h:message for="ciudad"/>
+        <br/>
+        <h:outputLabel for="colonia" value="#{msg['vacanteForm.colonia']}"/>
+        <h:inputText id="colonia" value="#{vacanteForm.candidato.colonia}" required="true"/>
+        <h:message for="colonia"/>
+        <br/>
+        <h:outputLabel for="codigoPostal" value="#{msg['vacanteForm.codigoPostal']}"/>
+        <h:inputText id="codigoPostal" value="#{vacanteForm.candidato.codigoPostal}" required="true"
+                     immediate="true"
+                     onchange="this.form.submit()" valueChangeListener="#{vacanteForm.codigoPostalListener}"/>
+        <h:message for="codigoPostal"/>
         <br/>
         <h:commandButton action="#{vacanteForm.enviar}" value="#{msg['btn.enviar']}"/>
         <h:messages globalOnly="true"/>

@@ -18,6 +18,33 @@ public class Candidato {
     private String apellido;
     private Integer sueldoDeseado;
     private Date fechaNacimiento;
+    private String ciudad;
+    private String colonia;
+    private String codigoPostal;
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public String getColonia() {
+        return colonia;
+    }
+
+    public void setColonia(String colonia) {
+        this.colonia = colonia;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
 
     public Date getFechaNacimiento() {
         return fechaNacimiento;
