@@ -9,27 +9,27 @@
 <h:body>
 
     <h:form>
-        <h:outputLabel for="nombre" value="Nombre: "/>
+        <h:outputLabel for="nombre" value="#{msg.nombre}"/>
         <h:inputText id="nombre" value="#{vacanteForm.candidato.nombre}" required="true"/>
         <h:message for="nombre"/>
         <br/>
-        <h:outputLabel for="apellido" value="Apellido: "/>
+        <h:outputLabel for="apellido" value="#{msg.apellido}"/>
         <h:inputText id="apellido" value="#{vacanteForm.candidato.apellido}" required="true"/>
         <h:message for="apellido"/>
         <br/>
-        <h:outputLabel for="sueldoDeseado" value="Sueldo Deseado: "/>
+        <h:outputLabel for="sueldoDeseado" value="#{msg['sueldo.deseado']}"/>
         <h:inputText id="sueldoDeseado" value="#{vacanteForm.candidato.sueldoDeseado}" required="true">
             <f:validateLongRange minimum="20000" maximum="130000"/>
         </h:inputText>
         <h:message for="sueldoDeseado"/>
         <br/>
-        <h:outputLabel for="fechaNacimiento" value="Fecha Nacimiento: "/>
+        <h:outputLabel for="fechaNacimiento" value="#{msg['fecha.nacimiento']}"/>
         <h:inputText id="fechaNacimiento" value="#{vacanteForm.candidato.fechaNacimiento}" required="true">
             <f:convertDateTime pattern="dd/mm/yyyy"/>
         </h:inputText>
         <h:message for="fechaNacimiento"/>
         <br/>
-        <h:commandButton action="#{vacanteForm.enviar}" value="Enviar"/>
+        <h:commandButton action="#{vacanteForm.enviar}" value="#{msg['btn.enviar']}"/>
         <h:messages globalOnly="true"/>
     </h:form>
 </h:body>
