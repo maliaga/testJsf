@@ -43,6 +43,18 @@
                      onchange="this.form.submit()" valueChangeListener="#{vacanteForm.codigoPostalListener}"/>
         <h:message for="codigoPostal"/>
         <br/>
+        <h:commandLink actionListener="#{vacanteForm.ocultarComentario}" immediate="true" rendered="#{!vacanteForm.comentarioEnviado}" value="#{msg['vacanteForm.mostrar']}"/>
+        <h:commandLink actionListener="#{vacanteForm.ocultarComentario}" immediate="true" rendered="#{vacanteForm.comentarioEnviado}" value="#{msg['vacanteForm.ocultar']}"/>
+        <h:panelGroup rendered="#{vacanteForm.comentarioEnviado}">
+            <table>
+                <tr>
+                    <td><h:outputLabel for="comentario" value="#{msg['vacanteForm.comentario']}"/> </td>
+                </tr>
+                <tr>
+                    <td><h:inputTextarea id="comentario" cols="50" rows="10" value="#{candidato.comentario}"/> </td>
+                </tr>
+            </table>
+        </h:panelGroup>
         <h:commandButton action="#{vacanteForm.enviar}" value="#{msg['btn.enviar']}"/>
         <h:messages globalOnly="true"/>
     </h:form>
